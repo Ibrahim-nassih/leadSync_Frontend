@@ -61,6 +61,7 @@ export class UserEffects  {
             lastName: decoded.family_name,
         }
         console.log('firstname',user.firstName)
+        console.log('token',access_token)
         this.storage.saveValue('user',user)
         this.storage.saveValue('accessToken',access_token)
 

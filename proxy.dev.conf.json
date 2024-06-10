@@ -5,7 +5,7 @@
     "logLevel": "debug"
   },
   "/auth": {
-    "target": "https://authdev.clinops.app/auth",
+    "target": "http://127.0.0.1:8080/auth/",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true,

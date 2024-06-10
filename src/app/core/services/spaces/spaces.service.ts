@@ -22,7 +22,8 @@ export class SpacesService {
   
   
   getSpaces(): Observable<Space[]> {
-    return this.http.get<Space[]>('api/space',)
+    console.log(this.authSer.getToken());
+    return this.http.get<Space[]>('api/space')
   }
   getLeads(space:number): Observable<Lead[]> {
     return this.http.get<Lead[]>('api/workflow', {headers:new HttpHeaders({id: space.toString(),})});
