@@ -1,32 +1,55 @@
 # LeadSync Frontend
 
+LeadSync is a web application for project management and bug tracking implemented with Django and Angular.
 
+## Getting Started
 
-## Getting started
-LeadSync is an application web for projects management and bug tracking that implemented with two stack django and Angular
-Backend Repository : https://github.com/Ibrahim-nassih/leadSync_Backend
-Frontend Repository : https://github.com/Ibrahim-nassih/leadSync_Backend.git
+To start using LeadSync, follow these steps:
 
-## Add your files
+1. Clone the backend repository:
+- git clone https://github.com/Ibrahim-nassih/leadSync_Backend.git
 
-push an existing Git repository with the following command:
+2. Clone the frontend repository:
+- git clone https://github.com/Ibrahim-nassih/leadSync_Frontend.git
+
+3. Navigate to the frontend directory:
+- cd leadSync_Frontend
+
+4. Install Angular dependencies:
+- npm install
+
+## Authentication with Keycloak
+
+LeadSync uses Keycloak for authentication. Keycloak is an open-source Identity and Access Management solution that ensures secure access to the application.
+
+### Setting Up Keycloak
+
+1. **Install Keycloak**: Download and install Keycloak from [here](https://www.keycloak.org/downloads.html) on your server.
+
+2. **Create a Realm**: In Keycloak, create a new realm for your LeadSync application.
+
+3. **Create a Client**: Within your realm, create a new client representing your Django application. Configure the client with appropriate settings, including redirect URIs.
+
+### Integrating Token Validation
+
+LeadSync integrates token validation using Keycloak to restrict access to authenticated users. Here's how it works:
+
+1. **Initialization**: Initialize a `KeycloakOpenID` instance to interact with the Keycloak server.
 
 ```
-cd existing_repo
-git remote add origin https://github.com/Ibrahim-nassih/leadSync_Backend.git
-git branch -M main
-git push -uf origin main
+export class Env {
+    public static realm = 'Lead'
+    public static grant_type = 'password'
+    public static client_id = 'AngularPromoteApp'
+    public static client_secret = 'Tx7VjdtbPOB9BEidPR0k4hA8vvpBMQcU'
+    public static audience: 'DjangoPromoteApp'
+    public static id_innova = '15122dec-b629-46ef-a601-d0af48757a7d'
+}
+
 ```
-
-
-***
 ## Author
-https://github.com/Ibrahim-nassih
+LeadSync frontend is authored by Ibrahim Nassih.
 
-## Installation
-After pulling the frontend repo you can run this commande to install the Angular dependecies for this project
-- npm run install
-
-## Video Demo
+## Visuals
+Watch a demo of LeadSync:
 [![Video Demo](https://img.youtube.com/vi/PZOanoZQVbM/0.jpg)](https://www.youtube.com/watch?v=PZOanoZQVbM)
-
