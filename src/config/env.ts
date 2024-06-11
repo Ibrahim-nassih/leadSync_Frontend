@@ -1,8 +1,18 @@
+// This class represents environment variables used in the application
 export class Env {
-    public static realm = 'Lead'
-    public static grant_type = 'password'
-    public static client_id = 'AngularPromoteApp'
-    public static client_secret = 'Tx7VjdtbPOB9BEidPR0k4hA8vvpBMQcU'
-    public static audience: 'DjangoPromoteApp'
-    public static id_innova = '15122dec-b629-46ef-a601-d0af48757a7d'
+    // The Keycloak realm for authentication
+    public static realm = 'Lead';
+
+    // The grant type used for authentication (e.g., 'password' for username/password flow)
+    public static grant_type = 'password';
+
+    // The client ID used for authentication with Keycloak
+    public static client_id = 'AngularPromoteApp';
+
+    // The client secret used for authentication with Keycloak
+    public static client_secret = 'Tx7VjdtbPOB9BEidPR0k4hA8vvpBMQcU';
+
+    // The audience for API requests (e.g., 'DjangoPromoteApp')
+    public static audience: 'DjangoPromoteApp';
+
 }
